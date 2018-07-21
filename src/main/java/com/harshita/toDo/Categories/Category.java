@@ -12,7 +12,7 @@ import java.util.List;
 public class Category {
 
     @Id
-    public int id;
+    public String id;
 
     public String name;
     public List<Task> tasks;
@@ -20,6 +20,30 @@ public class Category {
     public Category() {
 
         this.tasks = new ArrayList<>();
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Task> getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(List<Task> tasks) {
+        this.tasks = tasks;
     }
 
     public Category(String name) {

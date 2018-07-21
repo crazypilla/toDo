@@ -1,5 +1,6 @@
 package com.harshita.toDo.Tasks;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -9,7 +10,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 
 
-@Document(collection = "tasks")
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Task {
 
     @Id

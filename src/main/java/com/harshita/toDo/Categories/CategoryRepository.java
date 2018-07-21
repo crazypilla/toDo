@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface CategoryRepository extends MongoRepository<Category, String> {
 
-    public List<Category> findByName(String name);
+     Category findByName(String name);
 
-    //public List<Task> findById(int id);
+   // List<Task> findById(int id);
 
 }

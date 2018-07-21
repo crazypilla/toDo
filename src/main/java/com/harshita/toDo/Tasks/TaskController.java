@@ -20,12 +20,12 @@ public class TaskController {
         taskRepository.save(task);
         //return task.getId();
     }
-
+/*
     @RequestMapping(method=RequestMethod.GET, value="/tasks/{id}")
     public Task show(@PathVariable String id) {
         return taskRepository.findByTaskId(id);
     }
-
+*/
 
     @RequestMapping(method=RequestMethod.PUT, value="/tasks/{id}")
     public Task update(@PathVariable String id, @RequestBody Task product) {
