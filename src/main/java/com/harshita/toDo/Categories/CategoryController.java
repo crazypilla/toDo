@@ -40,15 +40,22 @@ public class CategoryController {
             cat.setTasks(product.getTasks());
         //());
         categoryRepository.save(cat);
-        return product;
+        return cat;
+    }
+
+    @PostMapping(value="/categories/")
+    public Category add(@RequestBody Category newCat) {
+
+        categoryRepository.save(newCat);
+        return newCat;
+
+
     }
 
 
-
-
     @RequestMapping(method=RequestMethod.DELETE, value="/categories/{name}")
-    public String delete(@PathVariable String id) {
-        Category c = categoryRepository.findByName(id);
+    public String delete(@PathVariable String name) {
+        Category c = categoryRepository.findByName(name);
         categoryRepository.delete(c);
 
         return "category deleted";
